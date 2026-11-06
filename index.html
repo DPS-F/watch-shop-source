@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>23:59 | Магазин часов</title>
+  </head>
+  <body>
+    <header>
+      <h1>23:59</h1>
+      <p>Искусство точного времени</p>
+      <button id="theme-toggle" class="theme-btn">Сменить тему</button>
+    </header>
+
+    <main>
+      <div class="controls">
+        <input type="text" id="search-input" placeholder="Поиск модели...">
+        
+        <select id="category-select">
+          <option value="all-watches">Все часы</option>
+          <option value="mens-watches">Мужские часы</option>
+          <option value="womens-watches">Женские часы</option>
+          <option value="sunglasses">Очки</option>
+          <option value="womens-jewellery">Украшения</option>
+        </select>
+
+        <button id="search-btn">Найти</button>
+      </div>
+
+      <div id="loading" class="status">Загрузка каталога...</div>
+      <div id="error" class="status" style="display: none;">
+        Ошибка загрузки. 
+        <button id="retry-btn">Повторить</button>
+      </div>
+      <div id="empty" class="status" style="display: none;">Ничего не найдено </div>
+
+      <div id="products" class="products-grid"></div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
